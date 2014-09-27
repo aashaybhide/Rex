@@ -1,0 +1,7 @@
+RewriteEngine On # Turn on the rewriting engine 
+#RewriteRule ^/?$ /rexFramework/Bootstrap.php?param=account [NC,L] 
+RewriteRule ^[A-Za-z-]+/?$ /rexFramework/AutoLoader.php?param=$0 [NC,L]
+RewriteRule ^[A-Za-z-]+/([A-Za-z0-9-_]+)/?$ /rexFramework/AutoLoader.php?param=$0 [NC,L]
+RewriteRule ^[A-Za-z-]+/([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ /rexFramework/AutoLoader.php?param=$0 [NC,L]
+
+#ErrorDocument 404 /404.php
